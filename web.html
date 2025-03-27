@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Birthday Countdown</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ <style type="text/css" id="dcoder_stylesheet">body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 10px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.invite-text {
+    font-size: 18px;
+    background-color: #333;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.countdown {
+    font-size: 24px;
+    margin: 20px 0;
+    background-color: #222;
+    padding: 10px;
+    display: inline-block;
+}
+
+.contact {
+    background-color: #333;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.contact p {
+    font-size: 16px;
+    margin: 5px 0;
+}</style></head> 
+ <body> 
+  <div class="container"> 
+   <div class="social-icons"> <a href="#"><img src="x-icon.png" alt="X"></a> <a href="#"><img src="facebook-icon.png" alt="Facebook"></a> <a href="#"><img src="instagram-icon.png" alt="Instagram"></a> <a href="#"><img src="telegram-icon.png" alt="Telegram"></a> 
+   </div> 
+   <h1>MY BIRTHDAY IS COMING SOON</h1> 
+   <p class="invite-text">Youre invited in my 20th Birthday Party On July 20, 2025.</p> 
+   <div class="countdown"> <span id="days">119</span> Days : <span id="hours">15</span> Hours : <span id="minutes">17</span> Minutes : <span id="seconds">45</span> Seconds 
+   </div> 
+   <div class="contact"> 
+    <h2>Info:</h2> 
+    <p><strong>When:</strong> July 20, 2005</p> 
+    <p><strong>Where:</strong> Calbayog st. Highway Hills Mandaluyong City</p> 
+    <p><strong>Time:</strong> 8:00am</p> 
+   </div> 
+  </div> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">function updateCountdown() {
+    const eventDate = new Date("July 20, 2025 00:00:00").getTime();
+    const now = new Date().getTime();
+    const timeLeft = eventDate - now;
+
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerText = days;
+    document.getElementById("hours").innerText = hours;
+    document.getElementById("minutes").innerText = minutes;
+    document.getElementById("seconds").innerText = seconds;
+}
+
+setInterval(updateCountdown, 1000);</script></body></html>
